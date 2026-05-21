@@ -328,7 +328,7 @@ export const quickRefCards = [
     title: "Audit Logs",
     icon: "ClipboardList",
     category: "Advanced",
-    shortDescription: "Complete regulatory compliance trail.",
+    shortDescription: "System audit trail for tracking data changes and review activity.",
     sourceStatus: "confirmed",
     confidence: "high",
     linkToFullGuide: "#feature-audit-logs"

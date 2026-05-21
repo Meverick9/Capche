@@ -41,6 +41,7 @@ export default function Home() {
   });
 
   const activeFeatureData = fullFeatures.find(f => f.id === activeFeature);
+  const activeCardData = quickRefCards.find(c => c.id === activeFeature);
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -164,13 +165,36 @@ export default function Home() {
           <div className="space-y-6">
             {!activeFeatureData ? (
               <div className="text-center py-12">
-                <p className="text-slate-500 mb-4">Select a feature from Quick Reference to view full guide</p>
-                <button
-                  onClick={() => setActiveTab("quick")}
-                  className="px-4 py-2 bg-clinpurple-600 text-white rounded-lg text-sm font-medium"
-                >
-                  Go to Quick Reference
-                </button>
+                {activeCardData ? (
+                  <div className="space-y-4">
+                    <div className="text-4xl mb-2">{iconMap[activeCardData.icon] || "📋"}</div>
+                    <h2 className="text-xl font-semibold text-slate-800">{activeCardData.title}</h2>
+                    <span className={`inline-block text-xs px-2 py-1 rounded-full border ${statusColors[activeCardData.sourceStatus] || "bg-slate-100 text-slate-700 border-slate-200"}`}>
+                      {activeCardData.sourceStatus}
+                    </span>
+                    <p className="text-slate-600 max-w-md mx-auto">{activeCardData.shortDescription}</p>
+                    <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 max-w-md mx-auto">
+                      <p className="text-amber-800 text-sm font-medium">⚠️ Full guide not yet implemented for this prototype card.</p>
+                      <p className="text-amber-700 text-xs mt-1">This Quick Reference card is a placeholder. The detailed step-by-step guide has not been built.</p>
+                    </div>
+                    <button
+                      onClick={() => setActiveTab("quick")}
+                      className="text-clinpurple-600 text-sm font-medium hover:underline"
+                    >
+                      ← Back to Quick Reference
+                    </button>
+                  </div>
+                ) : (
+                  <div>
+                    <p className="text-slate-500 mb-4">Select a feature from Quick Reference to view full guide</p>
+                    <button
+                      onClick={() => setActiveTab("quick")}
+                      className="px-4 py-2 bg-clinpurple-600 text-white rounded-lg text-sm font-medium"
+                    >
+                      Go to Quick Reference
+                    </button>
+                  </div>
+                )}
               </div>
             ) : (
               <div className="space-y-6">

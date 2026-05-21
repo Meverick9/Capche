@@ -1,7 +1,10 @@
 # Captivate Live 4.4 - Features Catalog & Training Guide
 
-Interactive catalog of Captivate Live EDC system features with step-by-step training instructions for clinical research professionals.
+> **⚠️ Prototype Warning:** This is a standalone prototype. It is not the source-audited Clinical project. Data must be verified against official ClinCapture Captivate Live/Build guides before reuse.
+>
+> **Note:** Only 3 full guides are currently implemented (Add Subject, CRF Data Entry, Queries & Discrepancy Notes). The remaining Quick Reference cards are prototype placeholders.
 
+Interactive catalog of Captivate Live EDC system features with step-by-step training instructions for clinical research professionals.
 ## Features
 
 - **Complete Feature Catalog** - All Captivate Live 4.4 features organized by category

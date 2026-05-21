@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: #0f172a;
+  background: #f8fafc;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #c4b5fd; border-radius: 3px; }
+
+.status-confirmed { border-left: 4px solid #10b981; }
+.status-needsReview { border-left: 4px solid #f59e0b; }
+.status-Proposed { border-left: 4px solid #6366f1; }
+.status-notFound { border-left: 4px solid #ef4444; }
